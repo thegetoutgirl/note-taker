@@ -13,19 +13,11 @@ app.use(express.json());
 
 const db = require("./db/db.json");
 
-// app.get("/", function(req, res) {
-//   res.json(path.join(__dirname, "public/index.html"));
-// });
 // var notesWritten {
 //   uuid
 // }
 
 // ROUTES
-
-// Returns notes.html file
-app.get("/notes", function(req, res) {
-    res.sendFile(path.join(__dirname, "./public/notes.html"));
-  });
 
   // Returns index.html page
   app.get("/", function(req, res) {
@@ -35,6 +27,11 @@ app.get("/notes", function(req, res) {
   app.get("/", function(req, res) { // catchall
     res.sendFile(path.join(__dirname, "/public/index.html"));
   });
+
+  // Returns notes.html file
+app.get("/notes", function(req, res) {
+  res.sendFile(path.join(__dirname, "./public/notes.html"));
+});
 
 // GET Reads the db.json file and returns all saved notes as JSON
 app.get("/api/notes", function(req, res){
