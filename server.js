@@ -29,7 +29,7 @@ app.get("/notes", function(req, res) {
 
   // Returns index.html page
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "./public/index.html"));
+    res.json(path.join(__dirname, "./public/index.html"));
   });
 
 // GET Reads the db.json file and returns all saved notes as JSON
