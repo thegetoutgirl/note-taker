@@ -12,6 +12,8 @@
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "http": "0.0.0",
+    "run-scripts": "^0.4.0",
+    "start-script": "^0.1.0",
     "uuid": "^7.0.2"
   },
   "devDependencies": {},
