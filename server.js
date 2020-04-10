@@ -13,6 +13,9 @@ app.use(express.json());
 
 const db = require("./db/db.json");
 
+// app.get("/", function(req, res) {
+//   res.json(path.join(__dirname, "public/index.html"));
+// });
 // var notesWritten {
 //   uuid
 // }
@@ -30,7 +33,6 @@ app.get("/notes", function(req, res) {
   });
 
 // GET Reads the db.json file and returns all saved notes as JSON
-
 app.get("/api/notes", function(req, res){
   res.json(db)
 });
