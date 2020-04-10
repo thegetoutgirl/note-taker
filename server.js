@@ -32,6 +32,10 @@ app.get("/notes", function(req, res) {
     res.json(path.join(__dirname, "./public/index.html"));
   });
 
+  app.get("/", function(req, res) { // catchall
+    res.sendFile(path.join(__dirname, "/public/index.html"));
+  });
+
 // GET Reads the db.json file and returns all saved notes as JSON
 app.get("/api/notes", function(req, res){
   res.json(db)
