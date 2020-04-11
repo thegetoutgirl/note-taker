@@ -6,6 +6,8 @@ const fs = require("fs");
 const app = express();
 const PORT = process.env.PORT || 7000;
 
+
+
 app.use(express.static('public'));
 
 app.use(express.urlencoded({ extended: true }));
@@ -59,6 +61,10 @@ app.post("/api/notes", function(req, res) {
 
 // LISTENER
 
-app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-})
+// app.listen(process.env.PORT, function() {
+//     console.log("App listening on PORT " + PORT);
+// })
+
+app.listen(process.env.PORT || 7000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
