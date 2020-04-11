@@ -25,7 +25,7 @@ const db = require("./db/db.json");
   });
 
   app.get("/", function(req, res) { // catchall
-    res.sendFile(path.join(__dirname, "/public/index.html"));
+    res.sendFile(path.join(__dirname, "./public/index.html"));
   });
 
   // Returns notes.html file
