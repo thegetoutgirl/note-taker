@@ -22,5 +22,8 @@
   },
   "bugs": {
     "url": "https://github.com/thegetoutgirl/note-taker/issues"
+  },
+  "engines": {
+    "node": "13.12.0"
   }
 }
