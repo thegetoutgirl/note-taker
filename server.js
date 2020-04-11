@@ -4,9 +4,7 @@ const path = require("path");
 const fs = require("fs");
 
 const app = express();
-const PORT = process.env.PORT || 7000;
-
-
+const PORT = process.env.PORT;
 
 app.use(express.static('public'));
 
@@ -65,6 +63,6 @@ app.post("/api/notes", function(req, res) {
 //     console.log("App listening on PORT " + PORT);
 // })
 
-app.listen(process.env.PORT || 7000, function(){
+app.listen(PORT || 7000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
